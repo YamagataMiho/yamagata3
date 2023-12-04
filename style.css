@@ -1,0 +1,1411 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: bottom;
+  /* yomogi */
+  font-family: 'Glass Antiqua', cursive;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Noto Serif JP', serif;
+  font-family: 'Yomogi', cursive;
+  color: rgb(63, 22, 22);
+}
+
+html {
+  height: 100%;
+  /* background-image: url(./img/mokume.jpeg); */
+  /* background: url('https://stat.ameba.jp/user_images/20230106/16/migomigo7/b4/a0/j/o0640048015226286957.jpg'); */
+  background: url(./img/renga.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+section {
+  padding-top: 30vh;
+}
+
+@media (max-width:430px) {
+  section {
+    padding-top: 7vh;
+  }
+}
+
+/* nav */
+nav {
+  width: 100%;
+  height: 10vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+}
+
+nav ul {
+  width: 60%;
+  padding-left: 45vw;
+  display: flex;
+}
+
+nav ul li {
+  list-style-type: none;
+  margin-left: 50px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+nav ul li a:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
+nav ul li a::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: url('https://stat.ameba.jp/user_images/20230106/16/migomigo7/d8/db/j/o0640036215226286959.jpg');
+  background-size: cover;
+  transform: translateX(-100%);
+  transition: 0.5s;
+}
+
+nav ul li a:hover::before {
+  transform: translateX(0);
+  transition: 0.5s;
+}
+
+@media(max-width:800px) {
+  .menu {
+    width: 50%;
+  }
+
+  nav ul {
+    width: 70%;
+    padding-left: 15vw;
+  }
+
+  nav ul li {
+    margin-left: 40px;
+  }
+
+}
+
+@media(max-width:430px) {
+
+  /* ハンバーガーメニュー */
+  nav {
+    width: 100%;
+    margin-left: 50%;
+    height: 70%;
+    /*  */
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  nav ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .menu ul li a {
+    padding: 0.5em;
+  }
+
+  .menu {
+    width: 137%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: 0.5s ease;
+    transform: translateY(-130%);
+  }
+
+  .menu.open {
+    transform: translateY(0%);
+  }
+
+  /*  */
+  nav ul li a::before {
+    width: 70%;
+    height: 50%;
+    top: 30%;
+  }
+
+  /*トグルボタンのスタイル*/
+  .Toggle {
+    display: block;
+    position: fixed;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    z-index: 3;
+    right: 40px;
+    margin-top: -50px;
+  }
+
+  .Toggle span {
+    display: block;
+    position: absolute;
+    width: 50px;
+    border-bottom: solid 4px #333;
+    transition: .35s ease-in-out;
+  }
+
+  .Toggle span:nth-child(1) {
+    top: 5px;
+  }
+
+  .Toggle span:nth-child(2) {
+    top: 18px;
+  }
+
+  .Toggle span:nth-child(3) {
+    top: 32px;
+  }
+
+  .Toggle.active span:nth-child(1) {
+    top: 18px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .Toggle.active span:nth-child(2),
+  .Toggle.active span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+/* nav---ここまで--- */
+
+
+/* Top ボール */
+.sevena .shape-container {
+  animation: move-right 6s infinite cubic-bezier(.37, .55, .49, .67);
+  position: absolute;
+  left: calc(50% - 4em);
+  top: calc(50% - 4em);
+}
+
+.sevena .shape {
+  animation: bounce 6s infinite linear;
+  border-radius: 50%;
+  position: relative;
+  left: auto;
+  top: auto;
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX(-20em);
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  90%,
+  100% {
+    transform: translateX(20em);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-8em);
+    animation-timing-function: cubic-bezier(.51, .01, .79, .02);
+  }
+
+  15% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19, 1, .7, 1);
+  }
+
+  25% {
+    transform: translateY(-4em);
+    animation-timing-function: cubic-bezier(.51, .01, .79, .02);
+  }
+
+  32.5% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19, 1, .7, 1);
+  }
+
+  40% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(.51, .01, .79, .02);
+  }
+
+  45% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19, 1, .7, 1);
+  }
+
+  50% {
+    transform: translateY(3em);
+    animation-timing-function: cubic-bezier(.51, .01, .79, .02);
+  }
+
+  56% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19, 1, .7, 1);
+  }
+
+  60% {
+    transform: translateY(6em);
+    animation-timing-function: cubic-bezier(.51, .01, .79, .02);
+  }
+
+  64% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19, 1, .7, 1);
+  }
+
+  66% {
+    transform: translateY(7.5em);
+    animation-timing-function: cubic-bezier(.51, .01, .79, .02);
+  }
+
+  70%,
+  100% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19, 1, .7, 1);
+  }
+}
+
+.principle {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.shape {
+  border: 3px solid #fff;
+  background-color: rgb(255, 255, 255, 0.2);
+  width: 15em;
+  height: 15em;
+  position: absolute;
+  top: calc(50% - 2em);
+  left: calc(50% - 2em);
+}
+
+@media (max-width:800px) {
+  .principle {
+    width: 70%;
+    height: 75vh;
+  }
+
+  .shape {
+    width: 8em;
+    height: 8em;
+  }
+}
+
+@media (max-width:430px) {
+  .principle {
+    width: 0%;
+    height: 65vh;
+  }
+
+  .shape {
+    width: 5em;
+    height: 5em;
+  }
+}
+
+/* Top ボール ----ここまで---- */
+
+/* Top */
+/* 漢字の名前 */
+.Top .text {
+  position: absolute;
+  top: 10%;
+  left: 80%;
+  z-index: 2;
+}
+
+.Top .text h1 {
+  font-size: 80px;
+  font-family: 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', '游明朝体', sans-serif;
+  color: rgb(255, 255, 255, 0.6);
+  line-height: 1.7em
+}
+
+.bgextend {
+  animation-name: bgextendAnimeBase;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+}
+
+@keyframes bgextendAnimeBase {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.bgappear {
+  animation-name: bgextendAnimeSecond;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes bgextendAnimeSecond {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.bgLRextend::before {
+  animation-name: bgLRextendAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: rgb(255, 255, 255, 0.7);
+}
+
+@keyframes bgLRextendAnime {
+  0% {
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+
+  50% {
+    transform-origin: top;
+    transform: scaleY(1);
+  }
+
+  50.001% {
+    transform-origin: bottom;
+  }
+
+  100% {
+    transform-origin: bottom;
+    transform: scaleY(0);
+  }
+}
+
+
+/* 漢字の名前----ここまで---- */
+
+.textarea {
+  width: 100vw;
+  padding: 10px;
+  background: url('https://stat.ameba.jp/user_images/20230106/16/migomigo7/d8/db/j/o0640036215226286959.jpg');
+  background-size: cover;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.textarea::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: 0;
+  transition: cubic-bezier(0.32, 0, 0.67, 0);
+}
+
+.textarea:hover::before {
+  animation: twinkleAnime 0.5s linear;
+}
+
+@keyframes twinkleAnime {
+  0% {
+    transform: scale(2) rotate(45deg);
+    opacity: 0;
+  }
+
+  20% {
+    transform: scale(20) rotate(45deg);
+    opacity: 0.6;
+  }
+
+  40% {
+    transform: scale(30) rotate(45deg);
+    opacity: 0.4;
+  }
+
+  80% {
+    transform: scale(45) rotate(45deg);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.textarea h1 {
+  font-size: 40px;
+  color: #fff;
+}
+
+.image img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  position: absolute;
+  top: 65%;
+  left: 10%;
+}
+
+.glowAnime span {
+  opacity: 0;
+  color: #fff;
+}
+
+.glowAnime.glow span {
+  animation: glow_anime_on 10s ease forwards;
+}
+
+@keyframes glow_anime_on {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 0 #fff, 0 0 0 #fff;
+  }
+
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 10px #fff, 0 0 15px #fff;
+  }
+
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 0 #fff, 0 0 0 #fff;
+  }
+}
+
+@media(max-width:800px) {
+  .textarea {
+    padding: 10px;
+    top: 40%;
+  }
+
+  .image img {
+    width: 175px;
+    height: 175px;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+  }
+  .Top .text {
+    top: 10%;
+    left: 80%;
+  }
+  
+  .Top .text h1 {
+    font-size: 56px;
+    line-height: 1.5em
+  }
+  
+}
+
+
+@media(max-width:430px) {
+  .Top .text {
+    top: 15%;
+    left: 85%;
+  }
+
+  .Top .text h1 {
+    font-size: 40px;
+    line-height: 1.5em;
+  }
+
+  .textarea {
+    padding: 7px;
+    top: 33%;
+  }
+
+  .textarea h1 {
+    font-size: 24px;
+  }
+
+  .image img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 35%;
+    left: 5%;
+  }
+}
+
+/* Top ----ここまで---- */
+
+
+/* sectionタイトル背景バー */
+.section-line {
+  width: 100%;
+  height: 17vh;
+  background: url('https://stat.ameba.jp/user_images/20230106/16/migomigo7/bc/fd/j/o0640048015226286958.jpg');
+  background-size: cover;
+  /* color: #f0e4e1; */
+  font-size: 24px;
+  padding-top: 3vh;
+  padding-left: 5vw;
+  margin-bottom: 15vh;
+  border-top: 5px double #f0e4e1;
+  border-bottom: 5px double #f0e4e1;
+}
+
+.fadeLeft {
+  animation-name: fadeLeftAnime;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+}
+
+@keyframes fadeLeftAnime {
+  from {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+    transform: skew(0deg, -5deg);
+    width: 100%;
+  }
+}
+
+.fadeLeftTrigger {
+  opacity: 0;
+}
+
+@media(max-width:800px) {
+  .section-line {
+    height: 12vh;
+    margin-bottom: 10vh;
+  }
+
+}
+
+@media(max-width:430px) {
+  .section-line {
+    height: 10vh;
+    font-size: 16px;
+    margin-bottom: 7vh;
+    padding-top: 1vh;
+  }
+
+  @keyframes fadeLeftAnime {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+      transform: skew(0deg, -5deg);
+      width: 100%;
+    }
+  }
+}
+
+/* sectionタイトル背景バー ----ここまで---- */
+
+/* section About */
+.About p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 3rem;
+  background-color: rgb(255, 255, 255, 0.3);
+  margin: 150px 200px 0 200px;
+  padding: 80px 0;
+}
+.pakira {
+  margin-top: -20%;
+  margin-left: 72%;
+}
+
+
+@media(max-width:800px) {
+  .About p {
+    width: 80%;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5rem;
+    text-align: center;
+    padding: 40px 0;
+  }
+  .pakira {
+    margin-top: -20%;
+    margin-left: 70%;
+    width: 200px;
+    height: 200px;
+  }
+  
+}
+
+@media(max-width:430px) {
+  .About p {
+    width: 90%;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.2rem;
+    margin: 70px 20px 0 20px;
+    text-align: left;
+    padding: 10px 0;
+  }
+  .pakira {
+    display: none;
+  }
+  
+  
+}
+
+/* section Profile */
+.Profile .container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Profile .container .box01 {
+  margin-left: 5vw;
+  padding: 30px;
+  background-color: rgb(255, 255, 255, 0.5);
+}
+
+.Profile .container .face {
+  filter: saturate(40%);
+  width: 20vw;
+  height: 30vh;
+  object-fit: cover;
+  box-shadow: 20px 20px 15px -2px #555,
+    10px 10px 15px rgba(255, 255, 255, 0.7) inset;
+}
+
+.Profile .container .face:hover {
+  filter: saturate(100%);
+}
+
+
+.Profile .container .box01 .content1 {
+  padding-top: 5px;
+}
+.Profile .container .box01 .content1 .point{
+  margin-left: 20%;
+}
+
+.Profile .container .box01 .content1 ul {
+  padding-left: 20px;
+}
+
+.Profile .container .box01 .content1 ul li {
+  list-style-type: square;
+}
+
+.accordion_area {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title {
+  position: relative;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 3% 3% 3% 50px;
+  transition: all .5s ease;
+}
+
+.title::before,
+.title::after {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 2px;
+  background: #333;
+}
+
+.title::before {
+  top: 48%;
+  left: 15px;
+  transform: rotate(0deg);
+}
+
+.title::after {
+  top: 48%;
+  left: 15px;
+  transform: rotate(90deg);
+}
+
+.title.close::before {
+  transform: rotate(45deg);
+}
+
+.title.close::after {
+  transform: rotate(-45deg);
+}
+
+.Profile .box {
+  display: none;
+  background-color: #f3f3f3;
+  padding: 3%;
+}
+
+.Profile .container .box01 .content1 br {
+  display: none;
+}
+.content_box_history {
+  padding: 20px;
+  margin-left: 60%;
+  margin-top: -10%;
+}
+.content_box_history img{
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  object-position: right;
+}
+.content_box_genzai{
+  margin-top: -15%;
+}
+.Profile .content_box .content_box_others{
+  display: flex;
+}
+.Profile .container h3{
+  border-bottom: 2px double rgb(63, 22, 22);
+  border-top: 2px double rgb(63, 22, 22);
+  display: inline-block;
+  padding: 2px;
+  margin: 10px;
+}
+.Profile .container h4{
+  padding: 5px;
+}
+.Profile .content_box .content_box_others img{
+  width: 400px;
+  height: 300px;
+  object-fit: contain;
+}
+.Profile .content_box .content_box_others p{
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+@media (max-width:800px) {
+  .Profile .container .face {
+    width: 25vw;
+    height: 20vh;
+    object-fit: cover;
+  }
+
+  .Profile .container .pakira {
+    width: 35vw;
+    height: 40vh;
+    margin-left: 10%;
+  }
+
+  .Profile .container .box01 .content2 {
+    width: 50vw;
+  }
+
+  .Profile .container .box01 {
+    margin-top: 10px;
+  }
+  .content_box_history {
+    display: flex;
+    padding: 20px;
+    margin-left: 0%;
+    margin-top: 0%;
+  }
+  .content_box_history img{
+    width: 200px;
+    height: 150px;
+  }
+  .content_box_history p{
+    padding: 30px 0px 0px 10px;
+    text-align: center;
+  }
+  .content_box_genzai{
+    margin-top: 0%;
+  }
+  .Profile .content_box .content_box_others{
+    width: 100%;
+    display: block;
+    border-bottom: 3px dashed #f0e4e1;
+  }
+  .Profile .content_box .content_box_others img{
+    width: 100%;
+    height: 40vh;
+    object-fit: contain;
+    margin-left: 0%;
+  }
+  .Profile .content_box .content_box_others p{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+  }
+  .Profile .container .box01 .content2{
+    width: 100%;
+  }
+}
+@media (max-width:430px) {
+
+  .Profile .container .box01 .content1 br {
+    display: inline;
+  }
+
+  .Profile .title {
+    pointer-events: all;
+  }
+
+  .Profile .container {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .Profile .container .face {
+    width: 50vw;
+    height: 20vh;
+  }
+
+  .Profile .container .pakira {
+    width: 50vw;
+    height: 30vh;
+    margin-left: 50%;
+  }
+
+  .Profile {
+    font-size: 16px;
+  }
+
+  .accordion_area {
+    width: 100%;
+  }
+
+  .Profile .container .box01 {
+    margin-left: 0;
+    padding: 2px;
+  }
+
+  .Profile .container .box01 .content2 {
+    width: 100%;
+  }
+  .content_box_history {
+    display: flex;
+    padding: 20px;
+    margin-left: 0%;
+    margin-top: 0%;
+  }
+  .content_box_history img{
+    width: 200px;
+    height: 150px;
+  }
+  .content_box_history p{
+    padding: 20px 0px 0px 5px;
+    text-align: center;
+  }
+  .content_box_genzai{
+    margin-top: 0%;
+  }
+  .Profile .content_box .content_box_others:nth-child(2){
+    display: flex;
+    flex-direction:column-reverse;
+  }
+  .Profile .content_box .content_box_others{
+    width: 100%;
+    display: block;
+  }
+  .Profile .content_box .content_box_others img{
+    width: 100%;
+    height: 40vh;
+    object-fit: contain;
+    margin-left: 0%;
+  }
+  .Profile .content_box .content_box_others p{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+  }
+}
+
+/* section Profile ----こここまで-----*/
+
+/* section Work */
+/* fadeUp */
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeUpTrigger {
+  opacity: 0;
+}
+
+/* fadeUp ----ここまで */
+.Work .container_box{
+  height: 100vh;
+}
+.Work .container {
+  width: 100%;
+  height: 30vh;
+  margin: 80px auto 0 auto;
+  display: flex;
+}
+
+.Work .container .box {
+  width: 100%;
+  height: 100%;
+}
+
+.Work .container .box:nth-child(2),
+.Work .container .box:nth-child(3) {
+  margin-left: 40px;
+}
+
+.Work .container .box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.Work .container .box .kitakantougakuin {
+  object-fit: contain;
+}
+
+.Work .container .box img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+/*モーダルを開くボタン*/
+.Work .section-line {
+  margin-bottom: 15vh;
+}
+
+.Work .container .box .modal-open {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.Work .container .box .modal-open p {
+  display: flex;
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  border-bottom: 2px solid #000;
+}
+
+/*モーダル本体の指定 + モーダル外側の背景の指定*/
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background: rgba(0, 0, 0, 50%);
+  padding: 40px 20px;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+.modal-container:nth-child(1)
+{
+  z-index: 10;
+}
+.modal-container:nth-child(2)
+{
+  z-index: 5;
+}
+
+
+/*モーダル本体の擬似要素の指定*/
+.modal-container:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+/*モーダル本体に「active」クラス付与した時のスタイル*/
+.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*モーダル枠の指定*/
+.modal-body {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 1000px;
+  height: 800px;
+  width: 95%;
+}
+
+/*モーダルを閉じるボタンの指定*/
+.modal-close {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -40px;
+  right: -40px;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/*モーダル内のコンテンツの指定*/
+.modal-content {
+  background: #fff;
+  text-align: left;
+  padding: 30px;
+  height: 100%;
+}
+
+/* モーダルの中身 */
+.modal-content p {
+  margin: 10px 0;
+}
+
+.modal-content .contents .box {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  
+  padding: 10px;
+}
+.modal-content .contents .afterbox{
+  padding: 20px;
+}
+.modal-content .contents .box:nth-child(2) {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: 100px;
+}
+
+.modal-content a {
+  margin-left: 20%;
+  padding: 5px 10px;
+  border: 2px dashed brown;
+  text-decoration: none;
+}
+
+.modal-content a:hover {
+  font-weight: bold;
+  background-color: #f0e4e1;
+}
+.mission{
+  font-size: 24px;
+  font-weight: bold;
+}
+.modal-content .contents .box img {
+  width: 25%;
+  height: 5%;
+  object-fit: cover;
+}
+
+.modal-content .contents .box p {
+  width: 80%;
+  margin: 20px 50px;
+}
+.index{
+  z-index: 1;
+  position: relative;
+}
+.wrapper{
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+}
+@media(max-width:800px) {
+  .Work .section-line {
+    margin-bottom: 10%;
+  }
+
+  .Work .container {
+    width: 90%;
+    height: 25vh;
+  }
+
+  .modal-content a {
+    margin-left: 70%;
+  }
+
+  .modal-content .contents .box {
+    width: 100%;
+    margin: 10px 0px;
+  }
+
+  .modal-content .contents .box:nth-child(2) {
+    margin-left: 10px;
+  }
+
+  .Work .container .box img {
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+    object-fit: contain;
+  }
+
+  .modal-content .contents .box img {
+    width: 200px;
+    height: 160px;
+    object-fit: cover;
+  }
+  #modal2 a{
+    margin-left: 40%;
+  }
+
+}
+
+@media (max-width:430px) {
+  .Work .container {
+    width: 100%;
+    display: flex;
+    margin-top: 100px;
+  }
+
+  .Work .container .box {
+    width: 100%;
+    border: 1px solid #f0e4e1;
+    background-color: rgb(255, 255, 255, 0.2);
+  }
+
+  .Work .container .box .modal-open {
+    display: flex;
+    width: 100%;
+  }
+
+  .Work .container .box img {
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+    object-fit: contain;
+  }
+
+  .Work .container .box p {
+    font-size: 16px;
+  }
+
+  .Work .container .box:nth-child(2),
+  .Work .container .box:nth-child(3) {
+    margin-left: 0;
+  }
+
+  .fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeUpAnime {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .Work .section-line {
+    margin-bottom: 0;
+  }
+
+  /* モーダルの中身(responsive) */
+  .modal-content a {
+    margin: 5% 0% 5% 50%;
+    padding: 5px 10px;
+  }
+
+  .modal-content a:hover {
+    font-weight: bold;
+    background-color: #f0e4e1;
+  }
+
+  .modal-content .contents .box {
+    width: 100%;
+    margin: 10px 0px;
+  }
+
+  .modal-content .contents .box img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+  }
+
+  .modal-content .contents .box p {
+    width: 90%;
+    margin: 5px 5px;
+  }
+
+
+}
+
+/* section Work -----ここまで----*/
+
+/* section contact */
+.Will .container {
+  
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Will .container img {
+  width: 20vw;
+  height: 40vh;
+  /* margin-top: -20vh; */
+}
+
+.Will .container .box {
+  margin-bottom: 30vh;
+  margin-top: 20vh;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255,0.3);
+  padding: 20px 20px;
+}
+.Will .container .box p{
+  text-align: center;
+  line-height: 2rem;
+}
+@media(max-width:800px) {
+  .Will .container img {
+    width: 25vw;
+    height: 40vh;
+  }
+
+}
+
+@media(max-width:430px) {
+  .Will .section-line {
+    margin-top: 100px;
+  }
+
+  .Will .container {
+    width: 90%;
+  }
+
+  .Will .container img {
+display: none;  }
+
+  .Will .container .box {
+    width: 100%;
+    margin-right: 0px;
+    margin-top: 0vh;
+  }
+  .Will .container .box p{
+    line-height: 1.2rem;
+    letter-spacing: 0rem;
+  }
+
+  .Will .box h2 {
+    font-size: 16px;
+  }
+
+  .Will .box ul li {
+    margin-bottom: 10px;
+    font-weight: inherit;
+  }
+
+  .submit {
+    padding: 3px 30px;
+    font-weight: bold;
+    border-radius: 80px;
+    border: 3px solid white;
+  }
+
+
+
+}
+
+/* section contact ----ここまで----*/
+
+footer {
+  width: 100%;
+  height: 15vh;
+  /* background-color: brown; */
+  background: url('https://stat.ameba.jp/user_images/20230106/16/migomigo7/d8/db/j/o0640036215226286959.jpg');
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  padding: 0 16px;
+  color: #fff;
+}
