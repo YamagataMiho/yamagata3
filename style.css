@@ -15,8 +15,6 @@
 
 html {
   height: 100%;
-  /* background-image: url(./img/mokume.jpeg); */
-  /* background: url('https://stat.ameba.jp/user_images/20230106/16/migomigo7/b4/a0/j/o0640048015226286957.jpg'); */
   background: url(./img/renga.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -40,7 +38,7 @@ nav {
   display: flex;
   align-items: center;
   position: fixed;
-  z-index: 999;
+  z-index: 99;
 }
 
 nav ul {
@@ -423,7 +421,7 @@ nav ul li a:hover::before {
 /* 漢字の名前----ここまで---- */
 
 .textarea {
-  width: 100vw;
+  width: 100%;
   padding: 10px;
   background: url('https://stat.ameba.jp/user_images/20230106/16/migomigo7/d8/db/j/o0640036215226286959.jpg');
   background-size: cover;
@@ -582,7 +580,6 @@ nav ul li a:hover::before {
   height: 17vh;
   background: url('https://stat.ameba.jp/user_images/20230106/16/migomigo7/bc/fd/j/o0640048015226286958.jpg');
   background-size: cover;
-  /* color: #f0e4e1; */
   font-size: 24px;
   padding-top: 3vh;
   padding-left: 5vw;
@@ -1072,6 +1069,7 @@ nav ul li a:hover::before {
   opacity: 0;
   visibility: hidden;
   transition: .3s;
+  z-index: 100;
 }
 .modal-container:nth-child(1)
 {
