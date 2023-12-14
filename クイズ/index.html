@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023年 時事問題</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1 class="title">2023年時事問題</h1>
+    <div class="button">
+        <button onclick="ansStart()" id="ansStartButton">問題に挑戦する</button>
+    </div>
+
+    <div id="ansArea">
+        <!-- 問題文 -->
+        <h2 id="question"></h2>
+        <!-- 選択肢 -->
+        <p id="ans1"></p>
+        <p id="ans2"></p>
+        <p id="ans3"></p>
+        <p id="ans4"></p>
+
+
+        <!-- 解答ボタン -->
+        <div class="ansbutton">
+            <button onclick="ansButton(1)" id="ansButton1">選択肢1</button>
+            <button onclick="ansButton(2)" id="ansButton2">選択肢2</button>
+            <button onclick="ansButton(3)" id="ansButton3">選択肢3</button>
+        </div>
+        <!-- 正答数 -->
+        <p id="answer"></p>
+        <!-- タイマー -->
+        <p id="countDown"></p>
+
+    </div>
+
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
