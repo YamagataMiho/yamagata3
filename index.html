@@ -3,166 +3,183 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover">
-    <title>北関東学院 WEBページ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオサイト</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="http://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <!-- yomogi font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Serif+JP&family=Yomogi&display=swap"
+        rel="stylesheet">
 </head>
 
-<body>
-
-    <header id="top header">
-        <nav>
-            <div class="drawer">
-                <div id="logo"><a href="#top"><img src="./img/foot_logo.png" alt="logo"></a></div>
-                <div class="Toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#top">トップ</a></li>
-                    <li><a href="#course">コース一覧</a></li>
-                    <li><a href="#caria">キャリアサポート</a></li>
-                    <li><a href="#stuff">スタッフ紹介</a></li>
-                    <li><a href="#mousikomi">お申し込み手順</a></li>
-                    <li><a href="#access">アクセス</a></li>
-                    <li><a href="#otoiawase">お問合せ</a></li>
-                </ul>
-            </div>
-        </nav>
-
-
-        <div class="mainvisual2">
-            <p>北関東学院</p>
-        </div>
-        <div class="mainvisual">
-            <div class="image">
-                <img src="./shutterstock_365367170-min-2048x1342.webp" alt="">
-            </div>
-            <div class="back-container">
-                <div class="back-wrapper">
-                    <!-- <div class="shape"></div> -->
-                    <a href="#course" class="shape"></a>
-                </div>
-            </div>
-            <div class="text_01">
-                <p><a href="#course">自分に挑戦!<br>
-                        新しい自分を見つけよう</a>
-                </p>
-                <div class="button">
-                    <a href="#course">GO!</a>
-                </div>
-                <span class="after"></span><span class="before"></span>
-            </div>
-            <div class="text_02">
-                <span>"なりたい"</span><span>をかなえよう</span>
-            </div>
-        </div>
-    </header>
-
+<body ontouchstart="">
     <main>
-        <!-- コース一覧 -->
-        <section class="course" id="course">
-            <h1>コース一覧</h1>
-            <div class="content">
-                <div class="box1">
-                    <h2>WEBフロントエンド構築科</h2>
+        <header>
+            <nav>
+                <div class="nav">
+                    <div class="drawer">
+                        <img src="" alt="">
+
+                        <!-- ハンバーガーメニュー部分 -->
+                        <div class="Toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <!-- drawer ----ここまで---- -->
+
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#Top">Top</a></li>
+                            <li><a href="#About">About</a></li>
+                            <li><a href="#Profile">Profile</a></li>
+                            <li><a href="#Work">Work</a></li>
+                            <li><a href="#Will">Will</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="box2">
-                    <div class="font">
-                        <p>自分でWEBサイトを作りたい</p>
+            </nav>
+
+            <div class="Top" id="Top">
+                <!-- ボール -->
+                <article class="principle sevena">
+                    <div class="shape-container">
+                        <div class="shape a"></div>
                     </div>
-                    <div class="modal-open">
-                        「なりたい」を詳しく
+                </article>
+                <!-- ボール ----ここまで---- -->
+                <div class="text "><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">
+                            <h1>山</h1>
+                            <h1>方</h1>
+                            <h1>美</h1>
+                            <h1>穂</h1>
+                        </span></span>
+                </div>
+
+                <a href="./index.html#About" ontouchstart="">
+                    <div class="textarea">
+                        <h1 class="glowAnime">Miho Yamagata</h1>
                     </div>
-                    <div class="modal-container">
-                        <div class="modal-body">
-                            <div class="modal-close">×</div>
-                            <div class="modal-content">
-                                <p class="head_01">自分でWEBサイトを作ってみたい</p>
-                                <p class="head_02">名刺やチラシのデザインを作ってみたい</p>
-                                <p class="head_03">WEBデザイナーやクリエイターになりたい</p>
-                                <h3>そんなあなたに!</h3>
-                                <ul>
-                                    <li>WEBに関する基礎的な知識や概念等ひとつひとつ丁寧に説明してくれるので初心者でも安心♪</li>
-                                    <li>Illustrator,Photoshopを使って制作技術を身につけるので、就職先で違和感なく仕事に入れる♪</li>
-                                    <li>HTML＆CSSをしっかり身につけて、自分でホームページを作ったり編集することができるようになる♪</li>
-                                    <li>jQueryやWordpressも学べる♪</li>
-                                </ul>
-                                <h3>目指せるお仕事は（　＾ω＾）・・・？</h3>
-                                <p>WEBデザイナー,WEBクリエイター,HTMLコーダー,WEB編集等々他多数</p>
-                            </div>
+                </a>
+
+                <div class="image">
+                    <img src="./img/IMG_4896 (1).PNG" alt="">
+                </div>
+            </div>
+        </header>
+
+
+
+
+        <section class="About" id="About">
+
+            <div class="section-line fadeLeftTrigger">
+                <h2>
+                    <span class="txt-rotate" data-period="2000" data-rotate='[ "about", "About    このサイトについて"]'></span>
+                </h2>
+            </div>
+            <p>職業訓練校のフロントエンド構築科を受講中。
+                <br>ずっとやってみたかったコーディングに夢中。
+                <br>このポートフォリオサイトのテーマは”アットホーム”です。
+                <br>自分らしさを表現する為に自宅のデザインで作りました。
+                <br>今のやまがたが作れるページです。
+                <br>未熟ですので、ゆったりした気持ちで眺めていただけると幸いです。
+            </p>
+            <img src="./img/pakira.png" class="pakira">
+
+
+        </section>
+
+        <section class="Profile" id="Profile">
+            <div class="section-line fadeLeftTrigger">
+                <h2>
+                    <span class="txt-rotate" data-period="2000" data-rotate='[ "profile", "Profile    私の経歴"]'></span>
+                </h2>
+            </div>
+
+
+            <div class="container">
+                <img src="./img/face1.jpg" class="face">
+                <div class="box01 accordion_area">
+                    <h2 class="title">History</h2>
+                    <div class="box content1">
+                        <h4>経歴</h4>
+                        <p>1983年3月18日 <br>３人兄弟の末っ子として産まれる</p>
+                        <p>1989年 平成元年～ <br>函館市立北日吉小学校 入学卒業</p>
+                        <p>1995年 平成7年～ <br>教育大付属函館中学校 入学卒業</p>
+                        <p>1998年 平成10年～ <br>札幌北高等学校 入学卒業</p>
+                        <p>2002年 平成14年～ <br>北星学園大学 経済学部 経営情報学科 <br>入学卒業</p>
+                        <p>2006年 平成18年～ <br>札幌国際観光 札幌ロイヤルホテル 入社退社</p>
+                        <p>2007年 平成19年～ <br>日本生命保険相互会社 入社<br> 法人市場営業部 配属（１１年間）</p>
+                        <p class="point">（産育休約１年程を３回取得）</p>
+                        <p>2018年 平成30年～ <br>金融法人営業部 配属（４年間）</p>
+
+                        <p>2022年 令和4年～ <br>人事部採用担当 配属退社（１年間）</p>
+                        <div class="content_box_history">
+                            <img src="./img/puresentaikai.jpeg" alt="">
+                            <p>３社合同全国プレゼン大会優勝</p>
+                        </div>
+                        <div class="content_box_genzai">
+                            <h4>現在</h4>
+                            <p>北関東学院 フロントエンド構築科 修学中</p>
+
+                            <h4>使えるもの</h4>
+                            <ul>
+                                <li>HTML ★★★★★</li>
+                                <li>CSS ★★★★</li>
+                                <li>JS ※訓練中 ★</li>
+                                <li>WP ※これから修得予定</li>
+                                <li>Figma ※これから特訓予定</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="content">
-                <div class="box1">
-                    <h2>WEBプログラミングデザイン科</h2>
-                </div>
 
-                <div class="box2">
-                    <div class="font">
-                        <p>自分でWEBサイトを作りたい</p>
-                    </div>
-                    <div class="modal-open">
-                        「なりたい」を詳しく
-                    </div>
-                    <div class="modal-container">
-                        <div class="modal-body">
-                            <div class="modal-close">×</div>
-                            <div class="modal-content">
-                                <p class="head_01">自分でWEBサイトを作ってみたい</p>
-                                <p class="head_02">名刺やチラシのデザインを作ってみたい</p>
-                                <p class="head_03">WEBデザイナーやクリエイターになりたい</p>
-                                <h3>そんなあなたに!</h3>
-                                <ul>
-                                    <li>WEBに関する基礎的な知識や概念等ひとつひとつ丁寧に説明してくれるので初心者でも安心♪</li>
-                                    <li>Illustrator,Photoshopを使って制作技術を身につけるので、就職先で違和感なく仕事に入れる♪</li>
-                                    <li>HTML＆CSSをしっかり身につけて、自分でホームページを作ったり編集することができるようになる♪</li>
-                                    <li>jQueryやWordpressも学べる♪</li>
-                                </ul>
-                                <h3>目指せるお仕事は（　＾ω＾）・・・？</h3>
-                                <p>WEBデザイナー,WEBクリエイター,HTMLコーダー,WEB編集等々他多数</p>
+            <div class="container">
+                <div class="box01 accordion_area">
+                    <h2 class="title">Strength</h2>
+                    <div class="box content2">
+                        <h3>保有する資格</h3>
+                        <p>2級ファイナンシャルプランニング技能士(FP2級)
+                            <br>ライフ・コンサルタント
+                            <br>シニア・ライフ・コンサルタント
+                            <br>変額保険販売資格
+                            <br>外貨建て保険販売資格
+                            <br>損害保険資格
+                            <br>日商簿記3級
+                            <br>高等学校教諭一種免許状（情報科・商業科）
+                            <br>秘書技能検定2級
+                        </p>
+                        <h3>Others</h3>
+                        <div class="content_box">
+                            <div class="content_box_others">
+                                <div>
+                                    <h4>お金のありかたを考える</h4>
+                                    <img src="./img/profile_dayly.jpg" alt="">
+                                </div>
+                                <p>マーケットを毎日チェック。
+                                    毎朝ＴＢＳのモーニングサテライトを見て、スマホで日経新聞を確認。
+                                    地政学リスクによる変動はもちろん、金利上昇に伴うリスク等株価変動の懸念材料を見逃さぬようにしています。
+                                    写真は、私が毎日動きを感じる為に日本・米国・豪の国債金利と為替、日経平均とNYダウを書き留めているものです。
+                                </p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content">
-                <div class="box1">
-                    <h2>WEBデザインクリエーター科</h2>
-                </div>
-
-                <div class="box2">
-                    <div class="font">
-                        <p>自分でWEBサイトを作りたい</p>
-                    </div>
-                    <div class="modal-open">
-                        「なりたい」を詳しく
-                    </div>
-                    <div class="modal-container">
-                        <div class="modal-body">
-                            <div class="modal-close">×</div>
-                            <div class="modal-content">
-                                <p class="head_01">自分でWEBサイトを作ってみたい</p>
-                                <p class="head_02">名刺やチラシのデザインを作ってみたい</p>
-                                <p class="head_03">WEBデザイナーやクリエイターになりたい</p>
-                                <h3>そんなあなたに!</h3>
-                                <ul>
-                                    <li>WEBに関する基礎的な知識や概念等ひとつひとつ丁寧に説明してくれるので初心者でも安心♪</li>
-                                    <li>Illustrator,Photoshopを使って制作技術を身につけるので、就職先で違和感なく仕事に入れる♪</li>
-                                    <li>HTML＆CSSをしっかり身につけて、自分でホームページを作ったり編集することができるようになる♪</li>
-                                    <li>jQueryやWordpressも学べる♪</li>
-                                </ul>
-                                <h3>目指せるお仕事は（　＾ω＾）・・・？</h3>
-                                <p>WEBデザイナー,WEBクリエイター,HTMLコーダー,WEB編集等々他多数</p>
+                        <div class="content_box">
+                            <div class="content_box_others">
+                                <p>凡例を研究して、ひとりひとりの想う気持ちを最善のラストラブレターにする方法を考えます。
+                                    理想に近づく為に、思わぬ争いを招かぬように、法律がたくさんあって知らないことばかりなので、
+                                    情報キャッチ出来るようアンテナをはっています。
+                                </p>
+                                <div>
+                                    <h4>相続を学ぶ</h4>
+                                    <img src="./img/profile_study.jpg" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -170,345 +187,334 @@
             </div>
         </section>
 
-        <!-- キャリアサポート -->
-        <section id="caria">
-            <h1>キャリアサポート</h1>
-            <div class="kyusyokusien">
-                <div class="kyusyokusien_img">
-                    <img src="./img/kyushhoku-bunner.jpg" alt="bunner">
-                    <div class="QRcode">
-                        <img src="./img/QRコード.png" alt="code">
-                        <a
-                            href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/kyushokusha_shien/index.html">詳しくはこちら</a>
-                    </div>
-                    <div class="hellowork">
-                        <p>ハローワーク札幌</p>
-                        <p>ハローワーク札幌北</p>
-                        <p>ハローワーク札幌東</p>
+        <section class="Work" id="Work">
+            <div class="section-line fadeLeftTrigger">
+                <h2>
+                    <span class="txt-rotate" data-period="2000" data-rotate='[ "work", "Work    制作物を紹介します"]'></span>
+                </h2>
+            </div>
+
+            <div class="container_box">
+                <div class="container fadeUpTrigger index">
+                    <div class="wrapper">
+                        <div class="box">
+                            <div class="modal-open" data-number="1">
+                                <img src="./img/suizokukan.png" alt="">
+                                <p>きたかんとう水族館</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="modal-open" data-number="2">
+                                <img src="./img/kitakantougakuin.png" class="kitakantougakuin">
+                                <p>北関東学院</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="modal-open" data-number="3">
+                                <img src="./img/jikosyoukai.png" class="">
+                                <p>自己紹介サイト</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="kyusyokusien_text">
-                    <h2>
-                        求職支援制度とは？
-                    </h2>
-                    <p>「求職支援制度」とは、スキルアップのための職業訓練を行い、
-                        <br>1日でも早く就職できるよう国が支援する制度です。
+            </div>
+
+            <div class="container_box">
+                <div class="container fadeUpTrigger index">
+                    <div class="wrapper">
+                        <div class="box">
+                            <div class="modal-open" data-number="4">
+                                <img src="./img/origamijikan.png" alt="">
+                                <p>おばあちゃんの折り紙時間</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="modal-open" data-number="5">
+                                <img src="./img/animal.png" alt="">
+                                <p>動物入力あそび</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="modal-open" data-number="6">
+                                <img src="./img/quiz.png" alt="">
+                                <p>2023年時事問題</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--  -->
+            <div class="modal-container" id="modal1">
+                <div class="modal-body">
+                    <div class="modal-close">×</div>
+                    <div class="modal-content">
+                        <p class="mission">グループ制作：<br>きたかんとう水族館 <br><a
+                                href="./北関東水族館/suizokukan.html">サイトを見る</a></p>
+                        <div class="contents">
+                            <div class="box">
+                                <img src="./img/suizokukan.png" alt="#">
+                                <p>ページTopは動画を使用しました。画質と重さのバランスがギリギリのところまで調整しました。
+                                    まるで水中にいるような感覚になるのでぜひ見ていただきたいです。
+                                </p>
+                            </div>
+                            <div class="box">
+                                <img src="./img/suizokukan2.png" alt="#">
+                                <p>私の担当ページです。モバイルサイズから作成してみました。PCサイズのデザインを考えてからではないと、
+                                    スカスカになってしまい悩みました。
+                                    <br>背景画像は全ページ共通で、波が動いている様子がfixedで固定されています。
+                                </p>
+                            </div>
+                            <div class="box">
+                                <img src="./img/suizokukan3.png" alt="#">
+                                <p>デザインは泡を表現する為マルを意識して使用し、TOPページで最初の動画を引き立たせる為に
+                                    accordionでシンプルに仕上げました。
+                                </p>
+                            </div>
+                            <div class="afterbox">
+                                <h3>制作して気づいたこと</h3>
+                                <p>グループワークは担当に任せることが出来るので作業が早い反面、統一するところを最初にしっかり決めて
+                                    おく必要があり、スケジュールに打合せをあらかじめ入れておくと良かったかなと思いました。
+                                    また、今回は3人とも柔らかいけどしっかり主張するタイプだったので大丈夫でしたが、リーダーが必要なことも
+                                    あると思います。ミスリードすると泥沼にはまるので、ミスリードを早めに指摘する自信が必要と思いました。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-container" id="modal2">
+                <div class="modal-body">
+                    <div class="modal-close">×</div>
+                    <div class="modal-content">
+                        <p class="mission">北関東学院<br> <a href="https://yamagatamiho.github.io/kitakantougakuin/">サイトを見る</a></p>
+                        <div class="contents">
+                            <div class="box">
+                                <img src="./img/kitakantougakuin.png" alt="#">
+                                <p>cssだけでマル背景をぽよぽよ動かしています。<br>自分がプログラミングの印象はハードル高い印象があったので、
+                                    抵抗感を払拭する為やわらかさを表現しました。
+                                </p>
+                            </div>
+                            <div class="box">
+                                <img src="./img/kitakantougakuin2.png" alt="#">
+                                <p>modalを使用しサイトをすっきりさせています。<br>複数コースを全て見にいってもらえるようにする目的でmodalを使用。
+                                    modalの中身が全て同じものが表示されてしまうのでこれから修正します。
+                                </p>
+                            </div>
+                            <div class="box">
+                                <img src="./img/kitakantougakuin3.png" alt="#">
+                                <p>hover時人物から吹き出しが出て話しているようにしています。<br>担当教科のみの情報は他人が見てもしっくりこないので、
+                                    先生のキャラが出せるような工夫が必要と感じ、簡単なインタビュー風にしました。
+                                </p>
+                            </div>
+                            <div class="afterbox">
+                                <h3>制作して気づいたこと</h3>
+                                <p>制作を始める前にサイトを見て自分の見解をまとめる作業の重要さを感じたので、
+                                    今後制作に入る際にはまずそのステップは欠かさず入れようと思います。
+                                    また、制作物についてpositionを使いすぎるとレスポンシブ対応で苦労するということがわかりました。
+                                    それも踏まえての構図検討が必要と思いました。そして構成について事前調査と考えが甘かった点は次回直します。
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-container" id="modal3">
+                <div class="modal-body">
+                    <div class="modal-close">×</div>
+                    <div class="modal-content">
+                        <p class="mission">自己紹介サイト<br><a href="./自己紹介カード/index.html">サイトを見る</a></p>
+
+
+                        <div class="contents">
+                            <div class="box">
+                                <img src="./img/jikosyoukai.png" alt="#">
+                                <p>js学ぶ前の作品の為、htmlとcssのみで制作。<br>動きをつけれないのでcssの装飾で工夫しました。
+                                    コード学びたてなのでテーマは幕開けと、将来の展望の曖昧さがゆえ不安があることを表現しました。
+                                </p>
+                            </div>
+                            <div class="box">
+                                <img src="./img/jikosyoukai2.png" alt="#">
+                                <p>cssで付箋で表現。cssで画像の周りをぼかす。<br>画像をペタペタ貼ることしか知らなかったのですが、
+                                    コードでテープ的画像を作成。自己紹介をメモ風に仕上げました。
+                                </p>
+                            </div>
+                            <div class="box">
+                                <img src="./img/jikosyoukai3.png" alt="#">
+                                <p>見出しの表現が色々あり見せ方を学ぶ。<br>シンプルだけど見出しの装飾は重要。メリハリがつき、同時におしゃれ感も
+                                    表現できるので、工夫次第でサイトの雰囲気をつくることができる。
+                                </p>
+                            </div>
+                            <div class="afterbox">
+                                <h3>制作して気づいたこと</h3>
+                                <p>初めての制作で、制作手順で事前調査の大切さを痛感しました。習ったことだけを取り入れるのではなく、参考サイトを見て勉強するべきでした。
+                                    最低限の色合いのことやサイトの統一感の必要性を学びました。コードで表現できることがたくさんあると知り、これから知識を積み重ねていきます。
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="modal-container" id="modal4">
+                <div class="modal-body">
+                    <div class="modal-close">×</div>
+                    <div class="modal-content">
+                        <p class="mission">おばあちゃんの折り紙時間<br><a href="./おばあちゃんの折り紙/index.html">サイトを見る</a></p>
+
+
+                        <div class="contents">
+                            <div class="box">
+                                <img src="./img/origamijikan.png" alt="#">
+                                <p>折り紙の表現に和紙を使用。カラフルになりすぎないようなデザインを心がけました。
+                                    また折り紙のカラーでサイト全体がうるさくならないように気を付けて制作開始。
+                                </p>
+                            </div>
+                            <div class="box">
+                                <img src="./img/origamijikan2.png" alt="#">
+                                <p>cssで雰囲気を作る。作品が次々に増えているので、画像スライド式で一枚だけ大きく見えるようにする予定です。
+                                </p>
+                            </div>
+                            <div class="box">
+                                <img src="./img/origamijikan3.png" alt="#">
+                                <p>cssでborderをグラデーションに。サイトのカラーを抑える代わりに密かに華やかにする手段として取り入れました。
+                                </p>
+                            </div>
+                            <div class="afterbox">
+                                <h3>制作して気づいたこと</h3>
+                                <p>自己紹介カード制作後に他の生徒さん達の作品を見て取り込みたい要素を試したくて勢いで作ったもの。<br>
+                                    まだ途中ですが、これからスライドする画像に変更したり、サイト全体に動きを入れていこうと思います。
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-container" id="modal5">
+                <div class="modal-body">
+                    <div class="modal-close">×</div>
+                    <div class="modal-content">
+                        <p class="mission">動物入力あそび<br><a href="./if 動物入力/index.html">サイトを見る</a></p>
+
+
+                        <div class="contents">
+                            <div class="box">
+                                <img src="./img/animal.png" alt="#">
+                                <p>if文を使って、娘のタイピング練習用に制作しました。
+                                </p>
+                            </div>
+                            <div class="box">
+                                <img src="./img/animal2.png" alt="#">
+                                <p>codeにいる動物を入力すると表示される。
+                                </p>
+                            </div>
+                            <div class="box">
+                                <img src="./img/animal3.png" alt="#">
+                                <p>codeにいない動物を入力すると、画面の表示になる。
+                                </p>
+                            </div>
+                            <div class="afterbox">
+                                <h3>制作して気づいたこと</h3>
+                                <p>授業でif文を習って思わず自己制作。設定として色々な方法があると予感しながら、今自分が出来る範囲で
+                                    作ってみたものです。作った側の自己主張が強いアソビ感あふれる作品になってるかと思います。
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-container" id="modal6">
+                <div class="modal-body">
+                    <div class="modal-close">×</div>
+                    <div class="modal-content">
+                        <p class="mission">2023年時事問題<br><a href=" https://yamagatamiho.github.io/quiz/">サイトを見る</a></p>
+                        <div class="contents">
+                            <div class="box">
+                                <img src="./img/quiz2.png" alt="#">
+                                <p>javascriptでif文を使用し、正解と不正解の結果がalertで表示されます。
+                                </p>
+                            </div>
+                            <div class="box">
+                                <img src="./img/quiz3.png" alt="#">
+                                <p>変数countTimerで制限時間を設定し、countDownで残り時間が表示されます。
+                                </p>
+                            </div>
+                            <div class="box">
+                                <img src="./img/quiz4.png" alt="#">
+                                <p>setTimeoutで制限時間内に5問解き終わらなかった場合には、再挑戦の表示が出てもう一度とき始めることができます。
+                                </p>
+                            </div>
+                            <div class="afterbox">
+                                <h3>制作して気づいたこと</h3>
+                                <p>クイズを作成する授業は諸事情で欠席が重なり、jsコードの読み込みに大変苦労しましたが、
+                                    ひとつずつクリアにしていき理解しました。今回は授業ファイルをもとに制作しましたが、
+                                    自分で書けるようになるまで訓練していきたいと思います。
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Will" id="Will">
+            <div class="section-line fadeLeftTrigger">
+                <h2>
+                    <span class="txt-rotate" data-period="2000" data-rotate='[ "will", "    Will    あとがき"]'></span>
+                </h2>
+            </div>
+            <div class="container">
+
+                <img src="./img/denki.png" alt="denki">
+
+                <div class="box">
+                    <p>
+                        北関東学院に通い始めて3か月。
+                        お隣の方や講師の方々にお世話になりっぱなしな私ですが、<br>
+                        コードの授業が進むにつれて、家族が寝た後のパソコンを開く時間が楽しみになっております。<br>
+                        コードを書いてページが出来上がっていくことが楽しくて面白くて仕方がないのです。<br>
+                        周りの方々の会話についていけない中でも、修学をとても楽しんでおります。<br>
+                        しかし、仕事となると話は別ですね。<br>
+                        お金をいただくのですから。<br>
+                        見合う“モノ”が必要で。<br>
+                        まだまだ学ぶことがたくさんありますが、作ることが好きなことは自負しております。<br>
+                        引続き貪欲に知識の吸収とスキルを身に付けていき、経験を積み、活躍していきたいです。<br>
+                        この度は、ポートフォリオをご拝読頂きありがとうございました。
                     </p>
-                    <h2>
-                        この制度を用いると？
-                    </h2>
-                    <p>就職に有利なスキルを身につけられる職業訓練を無料で受講出来ます。
-                        <br>また、月10万円と別途通所手当や寄宿手当などが加算される
-                        <br>「職業訓練受講給付金」が受給可能。
-                    </p>
+
                 </div>
             </div>
         </section>
-
-        <!-- スタッフ紹介 -->
-        <section id="stuff">
-            <h1>スタッフ紹介</h1>
-            <div class="content_blog">
-                <div class="blog">
-                    <a href="https://ameblo.jp/kps-sapporo/">
-                        講師ブログ日々更新中！</a>
-                </div>
-            </div>
-            <div class="container" ontouchstart="">
-                <div class="teature">
-                    <img src="./staff/hyodo.jpg" alt="">
-                    <div class="box">
-                        <p class="text">兵藤です。<br>
-                            パソコン基礎とWEBデザイン担当です。</p>
-                    </div>
-                </div>
-                <div class="teature">
-                    <img src="./staff/ishida.jpg" alt="">
-                    <div class="box">
-                        <p class="text">石田です。<br>
-                            パソコン基礎とWEBデザイン担当です。</p>
-                    </div>
-                </div>
-                <div class="teature">
-                    <img src="./staff/ishimaru.jpg" alt="">
-                    <div class="box">
-                        <p class="text">石丸です。
-                            パソコン基礎とWEBデザインとプログラミング担当です。</p>
-                    </div>
-                </div>
-                <div class="teature">
-                    <img src="./staff/kamiyama.jpg" alt="">
-                    <div class="box">
-                        <p class="text">ジェントルメン神山です。
-                            心の声は出しません。たまに洩れちゃいますがそれはわざとです。</p>
-                    </div>
-                </div>
-                <div class="teature">
-                    <img src="./staff/kanai.jpg" alt="">
-                    <div class="box">
-                        <p class="text">skyblue金井です。
-                            食べるの大好きメンラーです。ウマ娘エグloveで公私混同しちゃう。</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container" ontouchstart="">
-                <div class="teature">
-                    <img src="./staff/kato.jpg" alt="">
-                    <div class="box">
-                        <p class="text">加藤です。<br>
-                            パソコン基礎とWEBデザイン担当です。</p>
-                    </div>
-                </div>
-                <div class="teature">
-                    <img src="./staff/kawamura.jpg" alt="">
-                    <div class="box">
-                        <p class="text">sunshine川村です。<br>
-                            smile & happy & peace担当です。</p>
-                    </div>
-                </div>
-                <div class="teature">
-                    <img src="./staff/kudo02.jpg" alt="">
-                    <div class="box">
-                        <p class="text">工藤です。<br>
-                            パソコン基礎とWEBデザイン担当です。</p>
-                    </div>
-                </div>
-                <div class="teature">
-                    <img src="./staff/matsumura02.jpg" alt="">
-                    <div class="box">
-                        <p class="text">松村です。<br>
-                            何でも聞いて良いよ。全部答えちゃるよ。</p>
-                    </div>
-                </div>
-                <div class="teature">
-                    <img src="./staff/mori02.jpg" alt="">
-                    <div class="box">
-                        <p class="text">森です。<br>
-                            パソコン基礎とWEBデザイン担当です。</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container" ontouchstart="">
-                <div class="teature">
-                    <img src="./staff/ogawa.jpg" alt="">
-                    <div class="box">
-                        <p class="text">小川です。<br>
-                            パソコン基礎とWEBデザイン担当です。</p>
-                    </div>
-                </div>
-                <div class="teature">
-                    <img src="./staff/tanaka_c.jpg" alt="">
-                    <div class="box">
-                        <p class="text">田中です。<br>
-                            パソコン基礎とWEBデザイン担当です。</p>
-                    </div>
-                </div>
-                <div class="teature">
-                    <img src="./staff/tsuda.jpg" alt="">
-                    <div class="box">
-                        <p class="text">津田です。<br>
-                            パソコン基礎とWEBデザイン担当です。</p>
-                    </div>
-                </div>
-                <div class="teature">
-                    <img src="./staff/yamada.jpg" alt="">
-                    <div class="box">
-                        <p class="text">山田です。<br>
-                            事務員です。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- 申し込み手順 -->
-        <section class="mousikomi" id="mousikomi">
-            <h1>お申込み手順</h1>
-            <div class="content">
-                <div class="box">
-                    <div class="box_title">
-                        <h2>01</h2>
-                        <h3>🏢</h3>
-                    </div>
-                    <div class="box_text">
-                        <div class="captionbtn_box">
-                            <h4 class="caption1">ハローワークへ</h4>
-                            <span class="captionbtn"></span>
-                        </div>
-                        <div class="captionbox">
-                            <p class="caption2">
-                                求職申込を行い
-                                <br>求職者支援制度の
-                                <br>説明を受ける。※
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box_title">
-                        <h2>02</h2>
-                        <h3>🤔</h3>
-                    </div>
-                    <div class="box_text">
-                        <div class="captionbtn_box">
-                            <h4 class="caption1">選ぶ</h4>
-                            <span class="captionbtn"></span>
-                        </div>
-                        <div class="captionbox">
-                            <p class="caption2">
-                                訓練を選択。
-                                <br>必要書類を受取る。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box_title">
-                        <h2>03</h2>
-                        <h3>📄</h3>
-                    </div>
-                    <div class="box_text">
-                        <div class="captionbtn_box">
-                            <h4 class="caption1">申込む</h4>
-                            <span class="captionbtn"></span>
-                        </div>
-                        <div class="captionbox">
-                            <p class="caption2">
-                                受講申込手続き。
-                                <br>当校に郵送or持参。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box_title">
-                        <h2>04</h2>
-                        <h3>✍</h3>
-                    </div>
-                    <div class="box_text">
-                        <div class="captionbtn_box">
-                            <h4 class="caption1">選考会</h4>
-                            <span class="captionbtn"></span>
-                        </div>
-                        <div class="captionbox">
-                            <p class="caption2">指定された日時に
-                                <br>当校にて筆記試験と面接。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box_title">
-                        <h2>05</h2>
-                        <h3>📨</h3>
-                    </div>
-                    <div class="box_text">
-                        <div class="captionbtn_box">
-                            <h4 class="caption1">合格通知</h4>
-                            <span class="captionbtn"></span>
-                        </div>
-                        <div class="captionbox">
-                            <p class="caption2">「合格」の通知が届いたらハローワークへ提出。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box_title">
-                        <h2>06</h2>
-                        <h3>😊</h3>
-                    </div>
-                    <div class="box_text">
-                        <div class="captionbtn_box">
-                            <h4 class="caption1">受講開始</h4>
-                            <span class="captionbtn"></span>
-                        </div>
-                        <div class="captionbox">
-                            <p class="caption2">訓練スタート!
-                                <br>Go To Yourlife!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!--access-->
-        <section id="access" class="p-section-access">
-            <h1>アクセス</h1>
-
-            <div class="p-section-access__maps">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5831.271113921963!
-                2d141.34659047770998!3d43.0490989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0
-                x5f0b2bc0869bafeb%3A0x770b6b5a9dc821b7!2z5pyt5bmM77yr77yO77yz44OT44Or!5e0!3m2!1sja!2s
-                jp!4v1698585590763!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen=""
-                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-            <div class="p-section-access__info">
-                <div class="p-place-info">
-                    <dl class="p-place-info__item">
-                        <dt class="p-place-info__title"><span class="under">学校名</span></dt>
-                        <dd class="p-place-info__detail"> 北関東学院</dd>
-                    </dl>
-                    <dl class="p-place-info__item">
-                        <dt class="p-place-info__title"><span class="under">所在地</span></dt>
-                        <dd class="p-place-info__detail">〒064-0809 札幌市中央区南9条西3丁目10-97札幌KSビル602</dd>
-                    </dl>
-                    <dl class="p-place-info__item">
-
-                        <dt class="p-place-info__title"><span class="under">TEL</span></dt>
-                        <dd class="p-place-info__detail">011-232-5508</dd>
-                    </dl>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact" id="otoiawase">
-            <h1>お問合せ</h1>
-            <form action="">
-                <ul>
-                    <li>
-                        <label for="">担当者名</label>
-                        <input type="text">
-                    </li>
-                    <li>
-                        <label for="">電話番号</label>
-                        <input type="text">
-                    </li>
-                    <li>
-                        <label for="">メールアドレス</label>
-                        <input type="text">
-                    </li>
-                    <li>
-                        <label for="">お問い合わせ内容</label>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </li>
-                </ul>
-            </form>
-            <div class="submit_button">
-                <button class="submit" type="submit">送信</button>
-            </div>
-
-        </section>
-
     </main>
+
     <footer>
-        <small>@kitakantougakuin</small>
+        <p> @2023 </p>
+        <p> Miho Yamagata</p>
     </footer>
 
+    <!-- accordion -->
+    <script>
+        $(".title").on("click", (event) => {
+            let value = $(event.currentTarget).next();
+            console.log(value);
+            value.slideToggle();
+            $(event.currentTarget).toggleClass("close");
+        })
+    </script>
+    <!-- accordion -->
 
-
-
-
-
-
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script
+        src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/3-2-3-1/js/3-2-3-1.js"></script>
     <script src="./main.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/85188/raindrops.js"></script>
-    <script src="js/raindrops.js"></script>
 </body>
-
 
 </html>
